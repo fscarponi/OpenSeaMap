@@ -24,7 +24,7 @@ fun MainMap(){
             cameraPositionState = cameraPositionState
         ) {
             Marker(
-                state = MarkerState(position = cameraPositionState.position.target),
+                state = MarkerState(position = LatLng(42.543594, 14.126249)),
                 title = "Silvi",
                 snippet = "Marker in Silvi"
             )
