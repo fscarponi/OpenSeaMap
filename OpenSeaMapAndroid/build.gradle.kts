@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
-
 android {
     namespace = "it.fscarponi.openseamap.android"
     compileSdk = 33
@@ -12,6 +12,11 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
+        manifestPlaceholders["mapApiKey"]=
+            rootProject.file("local.properties").readLines().filter { !it.startsWith("#") }
+                .first { it.split("=")[0]=="mapAPIKey" }.let{
+                    it.split("=")[1]
+                }.also{println(it)}
     }
     buildFeatures {
         compose = true
@@ -38,5 +43,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
     implementation("androidx.compose.foundation:foundation:1.2.1")
     implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.activity:activity-compose:1.5.1")
+    implementation("androidx.activity:activity-compose:1.6.0")
+    implementation("com.google.android.gms:play-services-maps:18.1.0")
+    implementation("com.google.maps.android:maps-compose:2.7.2")
+
 }
