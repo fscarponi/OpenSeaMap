@@ -1,16 +1,27 @@
 PODS:
+  - GoogleMaps (7.1.0):
+    - GoogleMaps/Maps (= 7.1.0)
+  - GoogleMaps/Base (7.1.0)
+  - GoogleMaps/Maps (7.1.0):
+    - GoogleMaps/Base
   - shared (1.0)
 
 DEPENDENCIES:
+  - GoogleMaps (= 7.1.0)
   - shared (from `../shared`)
+
+SPEC REPOS:
+  trunk:
+    - GoogleMaps
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
+  GoogleMaps: bc56ffb0324e345a2d91bac1a64a920f9c8f1b20
   shared: 07cac7993e4f05eda6b76f3a213b070947c3b79f
 
-PODFILE CHECKSUM: 91fa6579fd31867cc3256b86a877fd4b258280e2
+PODFILE CHECKSUM: f71f0b150b467ff8a7b6178cd934d4b322a58601
 
 COCOAPODS: 1.11.3
