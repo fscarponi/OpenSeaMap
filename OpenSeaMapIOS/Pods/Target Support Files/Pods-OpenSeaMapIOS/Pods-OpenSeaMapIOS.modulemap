@@ -1,0 +1,6 @@
+framework module Pods_OpenSeaMapIOS {
+  umbrella header "Pods-OpenSeaMapIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
